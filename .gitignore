@@ -1,0 +1,14 @@
+/target/
+**/target
+.bob/
+.classpath/
+.m2/
+.project/
+.settings/
+.project
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr

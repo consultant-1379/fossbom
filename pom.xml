@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+
+    <!--Have to Check for latest version to be used with integration -->
+    <parent>
+        <groupId>com.ericsson.nms</groupId>
+        <artifactId>integration</artifactId>
+        <version>15.2.0.40</version>
+    </parent>
+
+    <groupId>com.ericsson.oss.foss</groupId>
+    <artifactId>fossbom</artifactId>
+    <version>3.0.3-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>fossbom</name>
+
+
+    <properties>
+       <!--  <version.presentation.pmevenfileDecoder>3.0.0-SNAPSHOT</version.presentation.pmevenfileDecoder> -->
+        <version.network.networkhealthmonitor>3.0.1</version.network.networkhealthmonitor>
+        <version.network.nodesyncmonitor>3.0.1</version.network.nodesyncmonitor>
+        <version.resteasy>3.15.3.Final</version.resteasy>
+        <ericsson.scm.url>
+            scm:git:[fetch=]ssh://gerritmirror-ha.lmera.ericsson.se:29418/OSS/ENM-Parent/SQ-Gate/com.ericsson.oss.services/fossbom[push=]ssh://gerrit.ericsson.se:29418/OSS/ENM-Parent/SQ-Gate/com.ericsson.oss.services/fossbom
+        </ericsson.scm.url>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+        <!-- commenting this out as we are moving only jackson and rest easy jars -->
+<!--             <dependency>
+                <groupId>com.ericsson.oss.foss.pmevent</groupId>
+                <artifactId>PmEventFileDecoder</artifactId>
+                <version>${version.presentation.pmevenfileDecoder}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency> -->
+
+            <dependency>
+                <groupId>com.ericsson.oss.foss.nodesyncmonitor</groupId>
+                <artifactId>nodesyncmonitor</artifactId>
+                <version>${version.network.nodesyncmonitor}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.ericsson.oss.foss.networkhealthmonitor</groupId>
+                <artifactId>NetworkHealthMonitor</artifactId>
+                <version>${version.network.networkhealthmonitor}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jboss.resteasy</groupId>
+                <artifactId>resteasy-jaxrs</artifactId>
+                <version>${version.resteasy}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <scm>
+        <developerConnection>${ericsson.scm.url}</developerConnection>
+        <connection>${ericsson.scm.url}</connection>
+    <tag>HEAD</tag>
+  </scm>
+
+
+
+</project>

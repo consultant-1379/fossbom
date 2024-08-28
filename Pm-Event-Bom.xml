@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+        <!--Have to Check for latest version to be used with integration -->
+    <parent>
+        <groupId>com.ericsson.nms</groupId>
+        <artifactId>integration</artifactId>
+        <version>15.2.0.35</version>
+    </parent>
+
+    <groupId>com.ericsson.oss.foss.pmevent</groupId>
+    <artifactId>PmEventFileDecoder</artifactId>
+    <version>3.0.0</version>
+    <packaging>pom</packaging>
+    <name>Pm-Event-FileDecoder</name>
+
+    <properties>
+
+        <version.logback>1.2.11</version.logback>
+        <version.spock>1.0-groovy-2.4</version.spock>
+        <version.groovy>2.4.9</version.groovy>
+        <javax.ejb-api.version>3.2.2</javax.ejb-api.version>
+        <version.asn-runtime>7.2.4</version.asn-runtime>
+        <version.commons-io>2.4</version.commons-io>
+        <version.equalsverifier>2.0.1</version.equalsverifier>
+        <version.commons-cli>1.2</version.commons-cli>
+        <version.testng>6.10</version.testng>
+
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${version.logback}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>${version.logback}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+            </dependency>
+
+
+            <dependency>
+                <groupId>javax.ejb</groupId>
+                <artifactId>javax.ejb-api</artifactId>
+                <version>${javax.ejb-api.version}</version>
+            </dependency>
+
+			<!-- Module 1 -->
+
+            <dependency>
+                <artifactId>asn1rt</artifactId>
+                <groupId>com.objsys.asn1j</groupId>
+                <version>${version.asn-runtime}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${version.commons-io}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>nl.jqno.equalsverifier</groupId>
+                <artifactId>equalsverifier</artifactId>
+                <version>${version.equalsverifier}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-cli</groupId>
+                <artifactId>commons-cli</artifactId>
+                <version>${version.commons-cli}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>${version.testng}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+
+
+
+</project>
